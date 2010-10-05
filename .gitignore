@@ -6,3 +6,6 @@ offline
 
 # ignore dropbox stuff
 .dropbox
+
+# ignore this file
+.gitignore
