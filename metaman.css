@@ -1,0 +1,68 @@
+div#metaman {
+	margin-bottom:15px;
+	padding-left:15px;
+	border:1px dotted grey; }
+	
+div#metaman h3 span#logo {
+	padding-right:10px; }
+
+div#metaman ul {
+	margin:0;
+	padding:0; }
+	
+div#metaman li {
+	padding-right:20px; }
+	
+div#metaman li.emptyList {
+	padding-left:20px;
+	font-style:italic;
+	display:inline-block; }
+	
+div#metaman li.hidden {
+	display:none; }
+
+div#metaman li.shown, 
+div#metaman li.shown {	
+	display:inline-block; }
+	
+div#metaman span.hint {
+	font-size:0.8em;
+	font-weight:normal; }
+	
+div#metaman a:link, 
+div#metaman a:visited, 
+div#metaman a:active, 
+div#metaman a:hover {
+	text-decoration:none;
+	padding-left:20px;
+	padding-top:3px;
+	background-repeat:no-repeat; }
+
+div#metaman a.addedItem:link, 
+div#metaman a.addedItem:visited { 	
+	color:green;
+	background-image:url(extensions/metaman/images/icon-added.png); }
+	
+div#metaman a.addedItem:active, 
+div#metaman a.addedItem:hover {
+	color:red;
+	background-image:url(extensions/metaman/images/icon-remove.png); }
+
+div#metaman a.newItem:link, 
+div#metaman a.newItem:visited {
+	background-image:url(extensions/metaman/images/icon-new.png); }
+	
+div#metaman a.newItem:active, 
+div#metaman a.newItem:hover {
+	color:green;
+	background-image:url(extensions/metaman/images/icon-added.png); }
+	
+div#metaman div#debugInfo {
+	font-family:'Courier New', Courier, monospace;
+	margin-top:30px;
+	margin-right:15px;
+	margin-bottom:15px;
+	background-color:rgb(255,255,210); }
+	
+div#metaman div#debugInfo p.error {
+	color:red; }

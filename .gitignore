@@ -1,0 +1,8 @@
+# ignore stuff which is not supposed to be in the repo
+offline
+
+# ignore os x stuff
+.DS_Store
+
+# ignore dropbox stuff
+.dropbox
