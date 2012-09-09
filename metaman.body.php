@@ -707,7 +707,7 @@ QUERYSTR;
 		$pattern = ' .,;:-=+#?!()[]{}|*"/<>';
 		$token = strtok($text, $pattern);
 		$tokens = array();	
-		while($token) {
+		while($token !== false) {
 			$tokens[] = $token;
 			$token = strtok($pattern);
 		}
