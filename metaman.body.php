@@ -548,28 +548,6 @@ QUERYSTR;
 
 
 	/**
-	 * Count the occurrences of all categories in all the pages similar to
-	 * $pageID.
- 	 */
-	/* OUTDATED!
-	public static function countCats($simpages, $pageID) {
-		$catFreq = array();
-		foreach ($simpages as $row) {
-			foreach (MetaMan::getCategories($pageID) as $category) {
-					if (array_key_exists($category, $catFreq)) {
-						$catFreq[$category] += 1;
-					} else {
-						$catFreq[$category] = 1;
-					}
-			}
-		}
-		return $catFreq;
-	}
-	*/
-
-
-
-	/**
 	 * Get all pages from the similarity matrix that have been compared with
 	 * $pageID and have a similarity above the threshold.
 	 */
