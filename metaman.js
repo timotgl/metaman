@@ -24,10 +24,10 @@ function formatCategorySuggestions(categories) {
 	var html = '';
 	for (var i in categories) {
 		var code = categories[i][0];
-		if (code in wikiSourceReverse) { 
+		if (code in wikiSourceReverse) {
 			<!--/* check if category is aready present */-->
 			<!--/* continue; */-->
-		}		
+		}
 		var key = storeWikiSource(code);
 		var category = categories[i][1];
 		html += '<li class="shown" id="sourceItem' + key + '">' +
@@ -47,10 +47,10 @@ function formatPropertySuggestions(properties) {
 	var html = '';
 	for (var i in properties) {
 		var code = properties[i]['code'];
-		if (code in wikiSourceReverse) { 
+		if (code in wikiSourceReverse) {
 			<!--/* check if property is aready present */-->
 			<!--/* continue; */-->
-		}				
+		}
 		var key = storeWikiSource(code);
 		var propertyList = properties[i]['properties'];
 		var value = properties[i]['value'];
@@ -64,8 +64,8 @@ function formatPropertySuggestions(properties) {
 		}
 		html += '<li class="shown" id="sourceItem' + key + '">' +
 			'<a class="newItem" href="javascript:addSourceItem(' + key + ')">' +
-			innerHTML + ' = ' + value + '</a></li>'; 
-	}	
+			innerHTML + ' = ' + value + '</a></li>';
+	}
 	if (html == '') { <!--/* No suggestions present */-->
 		html = getEmptyListPlaceholder();
 	}
@@ -113,7 +113,7 @@ function getProperties(wikitext) {
 	while (match = pattern.exec(wikitext)) {
 		var original = match[0];
 		var splitted = match[1].split('::');
-		var last = splitted.length-1;	 
+		var last = splitted.length-1;
 		var propertyList = splitted.slice(0, last);
 		var value = splitted[last];
 		properties.push([original, propertyList, value]);
@@ -187,17 +187,17 @@ function getPropertyLinks(propertyList) {
 <!--/* Parse wikitext for categories and properties */-->
 function parseWikitext() {
 	var wikitext = document.editform.wpTextbox1.value;
-	document.getElementById("categories").innerHTML = 	
+	document.getElementById("categories").innerHTML =
 		getCategoryLinks(getCategories(wikitext));
-	document.getElementById("properties").innerHTML = 		
-		getPropertyLinks(getProperties(wikitext));	
+	document.getElementById("properties").innerHTML =
+		getPropertyLinks(getProperties(wikitext));
 }
 
 
 
 function incSourceCounter() {
 	sourceCounter += 1;
-	return sourceCounter-1;	
+	return sourceCounter-1;
 }
 
 
@@ -222,7 +222,7 @@ function removeSourceItem(sourceID) {
 	var sourceItem = getWikiSource(sourceID);
 	document.editform.wpTextbox1.value = textarea.replace(sourceItem, "");
 	document.getElementById("sourceItem" + sourceID).setAttribute(
-		"class", "hidden");	
+		"class", "hidden");
 }
 
 

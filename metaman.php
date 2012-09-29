@@ -1,7 +1,7 @@
 <?php
 /**
- * MetaMan setup script. 
- * 
+ * MetaMan setup script.
+ *
  * Registers extension details and the used hooks.
  *
  * @author Timo Taglieber <mail@timotaglieber.de>
@@ -24,12 +24,12 @@ $wgExtensionCredits['other'][] = array(
 	'name' 			 => 'MetaMan',
     'description' 	 => 'Support for user-friendly metadata management.',
 	'descriptionmsg' => "credits_desc",
-	'version' 		 => 0.1, 
-    'author' 		 => 'Timo Taglieber', 
+	'version' 		 => 0.1,
+    'author' 		 => 'Timo Taglieber',
     'url' 			 => 'http://www.mediawiki.org/wiki/Extension:MetaMan');
 
 # Tell MediaWiki to load the extension body.
-$wgAutoloadClasses['MetaMan'] = dirname(__FILE__).'/metaman.body.php'; 
+$wgAutoloadClasses['MetaMan'] = dirname(__FILE__).'/metaman.body.php';
 
 # Load internationalization file
 $wgExtensionMessagesFiles['MetaMan'] = dirname(__FILE__).'/metaman.i18n.php';

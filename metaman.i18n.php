@@ -32,7 +32,7 @@ $messages['en'] = array(
 $messages['de'] = array(
 	'metaman' 			=> 'MetaMan',
     'credits_desc' 		=> 'Unterstützung für benutzerfreundliches Metadatenmanagement',
-    'specialpage'		=> 'Unter <a href="http://www.mediawiki.org/wiki/Extension:MetaMan">http://www.mediawiki.org/wiki/Extension:MetaMan</a> gibt es ausführliche Informationen über diese Erweiterung',    
+    'specialpage'		=> 'Unter <a href="http://www.mediawiki.org/wiki/Extension:MetaMan">http://www.mediawiki.org/wiki/Extension:MetaMan</a> gibt es ausführliche Informationen über diese Erweiterung',
 	'menu_title'		=> 'Metadaten bearbeiten',
 	'menu_usage' 		=> 'Die unten aufgeführten Metadaten können durch Anklicken hinzugefügt oder entfernt werden. Nur <span style="color:green">grün hervorgehobene</span> Metadaten werden gespeichert.',
 	'menu_emptylist'	=> 'Keine',
@@ -48,7 +48,7 @@ $messages['de'] = array(
 $messages['fr'] = array(
 	'metaman' 			=> 'MetaMan',
     'credits_desc' 		=> 'Aide pour une organisation ergonomique des métadonnées',
-    'specialpage'		=> 'Visitez <a href="http://www.mediawiki.org/wiki/Extension:MetaMan">http://www.mediawiki.org/wiki/Extension:MetaMan</a> pour en savoir plus sur cette extension',    
+    'specialpage'		=> 'Visitez <a href="http://www.mediawiki.org/wiki/Extension:MetaMan">http://www.mediawiki.org/wiki/Extension:MetaMan</a> pour en savoir plus sur cette extension',
 	'menu_title'		=> 'Editer les métadonnées',
 	'menu_usage' 		=> 'Cliquez sur les métadonnées ci-dessous pour les ajouter ou les supprimer du wikitext. Seulement les métadonnées <span style="color:green">mis en relief en vert </span> seront enregistrées.',
 	'menu_emptylist'	=> 'Aucun',
@@ -80,7 +80,7 @@ $messages['es'] = array(
 $messages['ru'] = array(
 	'metaman' 			=> 'MetaMan',
     'credits_desc' 		=> 'Поддержка удобного управления метаданными.',
-    'specialpage'		=> 'Дополнительную информацию о данном расширении вы найдёте по <a href="http://www.mediawiki.org/wiki/Extension:MetaMan">http://www.mediawiki.org/wiki/Extension:MetaMan</a>',    
+    'specialpage'		=> 'Дополнительную информацию о данном расширении вы найдёте по <a href="http://www.mediawiki.org/wiki/Extension:MetaMan">http://www.mediawiki.org/wiki/Extension:MetaMan</a>',
 	'menu_title'		=> 'Редактирование метаданных',
 	'menu_usage' 		=> 'Нажмите на метаданные ниже, чтобы добавить или удалить их из викитекста. Только выделенные зелёным цветом элементы будут сохранены.',
 	'menu_emptylist'	=> 'Hикакой',

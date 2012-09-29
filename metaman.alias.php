@@ -1,7 +1,7 @@
 <?php
 /**
  * MetaMan alias file
- * 
+ *
  * Allows the title of "Special:MetaMan" to be translated into another language.
  *
  * @author Timo Taglieber <mail@timotaglieber.de>
@@ -12,9 +12,9 @@
  */
 
 $aliases = array();
- 
+
 /** English */
 $aliases['en'] = array('MetaMan' => array('MetaMan', 'Meta Man'));
- 
+
 /** German (Deutsch) */
 $aliases['de'] = array('MetaMan' => array('MetaMan', 'Meta Man'));

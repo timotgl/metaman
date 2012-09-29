@@ -57,9 +57,9 @@ if (!this.JSON) {
 
 
     function str(key, holder) {
-        var i,          
-            k,          
-            v,          
+        var i,
+            k,
+            v,
             length,
             mind = gap,
             partial,
