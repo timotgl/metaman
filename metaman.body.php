@@ -7,7 +7,7 @@
  * through an AJAX-call (Javascript) from within the EditPage to his script.
  *
  * @author Timo Taglieber <mail@timotaglieber.de>
- * @version 0.2.2
+ * @version 0.2.3
  *
  * This work is licensed under the 	Creative Commons Attribution 3.0 Unported License:
  * http://creativecommons.org/licenses/by/3.0/
