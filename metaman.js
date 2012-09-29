@@ -144,7 +144,7 @@ function getCategoryLinks(categoryList) {
 	if (html == '') { <!--/* No categories present */-->
 		html = getEmptyListPlaceholder();
 	}
-	return '<ul id="categoryList">' + html + '</ul><p>' + categoryList.length + '</p>';
+	return '<ul id="categoryList">' + html + '</ul>';
 }
 
 
@@ -179,7 +179,7 @@ function getPropertyLinks(propertyList) {
 	if (html == '') { <!--/* No properties present */-->
 		html = getEmptyListPlaceholder();
 	}
-	return '<ul id="propertyList">' + html + '</ul><p>' + propertyList.length + '</p>';
+	return '<ul id="propertyList">' + html + '</ul>';
 }
 
 
