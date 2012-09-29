@@ -41,7 +41,7 @@ class MetaMan extends SpecialPage {
 	public static $simPagesThreshold = 0;
 
 	/** Switch output of debug information on/off */
-	public static $debugMode = true;
+	public static $debugMode = false;
 
 	/**  Large string with debug info, gets appended during execution. */
 	public static $debugInfo = '';
