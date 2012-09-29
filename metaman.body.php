@@ -96,7 +96,7 @@ class MetaMan extends SpecialPage {
 		# $wgLang - Language object selected by user preferences
 		# $wgContLang - Language object associated with the wiki being viewed.
 		global $wgContLang;
-		return $wgContLang->namespaceNames[NS_CATEGORY];
+		return $wgContLang->getNsText(NS_CATEGORY);
 	}
 	
 	
