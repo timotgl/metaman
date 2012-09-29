@@ -5,7 +5,7 @@
  * Allows the title of "Special:MetaMan" to be translated into another language.
  *
  * @author Timo Taglieber <mail@timotaglieber.de>
- * @version 0.2.1
+ * @version 0.2.2
  *
  * This work is licensed under the 	Creative Commons Attribution 3.0 Unported License:
  * http://creativecommons.org/licenses/by/3.0/
