@@ -1,32 +1,34 @@
-<!--/* Comments in here are formatted like this one because the content */-->
-<!--/* of this file is inserted into HTML. */-->
-
-<!--/* Print metadata suggestions */-->
+/**
+ * Print metadata suggestions
+ */
 function printSuggestions(request) {
 var suggestions = JSON.parse(request.responseText);
     document.getElementById("suggestions").innerHTML =
-        formatCategorySuggestions(suggestions['categorySuggestions']) +
-        formatPropertySuggestions(suggestions['propertySuggestions']);
+        formatCategorySuggestions(suggestions.categorySuggestions) +
+        formatPropertySuggestions(suggestions.propertySuggestions);
     document.getElementById("debugInfo").innerHTML =
         suggestions['debugInfo'];
 }
 
 
-
+/**
+ *
+ */
 function getEmptyListPlaceholder() {
     return '<li class="emptyList">%s</li>';
 }
 
 
-
-
+/**
+ *
+ */
 function formatCategorySuggestions(categories) {
     var html = '';
     for (var i in categories) {
         var code = categories[i][0];
         if (code in wikiSourceReverse) {
-            <!--/* check if category is aready present */-->
-            <!--/* continue; */-->
+            // check if category is aready present
+            // continue; // TODO: what was the point of this?
         }
         var key = storeWikiSource(code);
         var category = categories[i][1];
@@ -34,7 +36,9 @@ function formatCategorySuggestions(categories) {
             '<a class="newItem" href="javascript:addSourceItem(' + key + ')">' +
             category + '</a></li>';
     }
-    if (html == '') { <!--/* No suggestions present */-->
+    
+    // No suggestions present
+    if (html == '') {
         html = getEmptyListPlaceholder();
     }
     return '<h4>%s</span>' +
@@ -42,14 +46,16 @@ function formatCategorySuggestions(categories) {
 }
 
 
-
+/**
+ *
+ */
 function formatPropertySuggestions(properties) {
     var html = '';
     for (var i in properties) {
         var code = properties[i]['code'];
         if (code in wikiSourceReverse) {
-            <!--/* check if property is aready present */-->
-            <!--/* continue; */-->
+            // check if property is aready present
+            // continue;
         }
         var key = storeWikiSource(code);
         var propertyList = properties[i]['properties'];
@@ -66,7 +72,9 @@ function formatPropertySuggestions(properties) {
             '<a class="newItem" href="javascript:addSourceItem(' + key + ')">' +
             innerHTML + ' = ' + value + '</a></li>';
     }
-    if (html == '') { <!--/* No suggestions present */-->
+
+    // No suggestions present
+    if (html == '') {
         html = getEmptyListPlaceholder();
     }
     return '<h4>%s</span>' +
@@ -74,8 +82,9 @@ function formatPropertySuggestions(properties) {
 }
 
 
-
-<!--/* Parse wikitext for categories and return them */-->
+/**
+ * Parse wikitext for categories and return them
+ */
 function getCategories(wikitext) {
     var pattern = /\[\[((%s)|(%s)):([^:\]]+)\]\]/g;
     var categories = [];
@@ -87,7 +96,9 @@ function getCategories(wikitext) {
 }
 
 
-<!--/* Parse wikitext for template properties (parameters) and return them */-->
+/**
+ * Parse wikitext for template properties (parameters) and return them
+ */
 function getTemplateProperties(wikitext) {
     var outerPattern = /\{\{([^}]+)\}\}/g;
     var innerPattern = /\|([^=|}]+)=([^=|}]+)/g;
@@ -104,8 +115,9 @@ function getTemplateProperties(wikitext) {
 }
 
 
-
-<!--/* Parse wikitext for properties and return them */-->
+/**
+ * Parse wikitext for properties and return them
+ */
 function getProperties(wikitext) {
     var pattern = /\[\[(([^:\]]+)(::[^:\]]+)+)\]\]/g;
     var properties = [];
@@ -123,7 +135,9 @@ function getProperties(wikitext) {
 }
 
 
-
+/**
+ * TODO: comment method
+ */
 function createCategoryLink(source, category) {
     var key = storeWikiSource(source);
     return '<li id="sourceItem' + key + '" class="shown">' +
@@ -132,8 +146,9 @@ function createCategoryLink(source, category) {
 }
 
 
-
-<!--/* Create clickable links from the list of categories */-->
+/**
+ * Create clickable links from the list of categories
+ */
 function getCategoryLinks(categoryList) {
     var html = '';
     for (var i in categoryList) {
@@ -141,15 +156,18 @@ function getCategoryLinks(categoryList) {
         var category = categoryList[i][1];
         html += createCategoryLink(wikitext, category);
     }
-    if (html == '') { <!--/* No categories present */-->
+
+    // No categories present
+    if (html == '') {
         html = getEmptyListPlaceholder();
     }
     return '<ul id="categoryList">' + html + '</ul>';
 }
 
 
-
-<!-- /* Create clickable links from the list of properties */-->
+/**
+ * Create clickable links from the list of properties
+ */
 function createPropertyLink(source, properties, value) {
     var key = storeWikiSource(source);
     var innerHTML = '';
@@ -166,8 +184,9 @@ function createPropertyLink(source, properties, value) {
 }
 
 
-
-<!--/* Create clickable links from the list of properties */-->
+/**
+ * Create clickable links from the list of properties
+ */
 function getPropertyLinks(propertyList) {
     var html = '';
     for (var i in propertyList) {
@@ -176,15 +195,18 @@ function getPropertyLinks(propertyList) {
         var value = propertyList[i][2];
         html += createPropertyLink(wikitext, properties, value);
     }
-    if (html == '') { <!--/* No properties present */-->
+    
+    // No properties present
+    if (html == '') {
         html = getEmptyListPlaceholder();
     }
     return '<ul id="propertyList">' + html + '</ul>';
 }
 
 
-
-<!--/* Parse wikitext for categories and properties */-->
+/**
+ * Parse wikitext for categories and properties
+ */
 function parseWikitext() {
     var wikitext = document.editform.wpTextbox1.value;
     document.getElementById("categories").innerHTML =
@@ -194,20 +216,26 @@ function parseWikitext() {
 }
 
 
-
+/**
+ * TODO: comment method
+ */
 function incSourceCounter() {
     sourceCounter += 1;
     return sourceCounter-1;
 }
 
 
-
+/**
+ * TODO: comment method
+ */
 function getWikiSource(sourceID) {
     return wikiSource[sourceID];
 }
 
 
-
+/**
+ * TODO: comment method
+ */
 function storeWikiSource(source) {
     var key = incSourceCounter();
     wikiSource[key] = source;
@@ -216,7 +244,9 @@ function storeWikiSource(source) {
 }
 
 
-
+/**
+ * TODO: comment method
+ */
 function removeSourceItem(sourceID) {
     var textarea = document.editform.wpTextbox1.value;
     var sourceItem = getWikiSource(sourceID);
@@ -226,7 +256,9 @@ function removeSourceItem(sourceID) {
 }
 
 
-
+/**
+ * TODO: comment method
+ */
 function addSourceItem(sourceID) {
     document.editform.wpTextbox1.value += getWikiSource(sourceID) + '\n';
     document.getElementById("sourceItem" + sourceID).setAttribute(
@@ -235,22 +267,24 @@ function addSourceItem(sourceID) {
 }
 
 
-
-<!--/* Parse wikitext inside textarea, print clickable metadata links */-->
+/**
+ * Parse wikitext inside textarea, print clickable metadata links
+ */
 document.editform.wpTextbox1.onkeyup = function(evt) {
     parseWikitext();
 }
 
 
 
-<!--/* Store wiki code items */-->
-var wikiSource = new Array();
-var wikiSourceReverse = new Array();
-var sourceCounter = 0; <!--/* Counter for associative array wikiSource */-->
+// Store wiki code items
+var wikiSource = [],
+    wikiSourceReverse = [],
 
-<!--/* Trigger delayed parsing of wikitext (so DOM-tree completes first) */-->
+    // Counter for associative array wikiSource
+    sourceCounter = 0;
+
+// Trigger delayed parsing of wikitext (so DOM-tree completes first)
 setTimeout(parseWikitext, 500);
 
-<!--/* Trigger delayed retrieval of suggestions */-->
-setTimeout(
-    'sajax_do_call("MetaMan::getSuggestions", [%s], printSuggestions)', 550);
+// Trigger delayed retrieval of suggestions
+setTimeout('sajax_do_call("MetaMan::getSuggestions", [%s], printSuggestions)', 550);
