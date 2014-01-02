@@ -3,7 +3,7 @@
  * MetaMan internationalization messages
  *
  * @author Timo Taglieber <mail@timotaglieber.de>
- * @version 0.2.3
+ * @version 0.2.4
  *
  * This work is licensed under the 	Creative Commons Attribution 3.0 Unported License:
  * http://creativecommons.org/licenses/by/3.0/
