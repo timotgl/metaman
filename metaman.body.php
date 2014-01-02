@@ -525,7 +525,7 @@ QUERYSTR;
 	 * templates as well.
 	 */
 	public static function getProperties($text) {
-		$pattern = '/\[\[([^:]+::[^\]]+)\]\]/';
+		$pattern = '/\[\[([^:\]]+::[^\]]+)\]\]/';
 		$delim = '::';
 		$matches = array();
 		$properties = array();
