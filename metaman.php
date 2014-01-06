@@ -24,7 +24,7 @@ $wgExtensionCredits['other'][] = array(
 	'name' 			 => 'MetaMan',
     'description' 	 => 'Support for user-friendly metadata management.',
 	'descriptionmsg' => "credits_desc",
-	'version' 		 => 0.1,
+	'version' 		 => '0.2.4',
     'author' 		 => 'Timo Taglieber',
     'url' 			 => 'http://www.mediawiki.org/wiki/Extension:MetaMan');
 
